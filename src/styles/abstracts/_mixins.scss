@@ -1,0 +1,56 @@
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'tablet' {
+        @media (min-width: #{$bp-phone + 1}) {
+            @content;
+        }
+    }
+    @if $breakpoint == 'desktop' {
+        @media (min-width: #{$bp-tablet + 1}) {
+            @content;
+        }
+    }
+    @if $breakpoint == 'large' {
+        @media (min-width: #{$bp-large + 1}) {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-text($size-phone, $size-tablet, $size-desktop) {
+    font-size: $size-phone;
+    @include respond-to('tablet') {
+        font-size: $size-tablet;
+    }
+    @include respond-to('desktop') {
+        font-size: $size-desktop;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin transition($prop: all, $time: 0.3s) {
+    transition: $prop $time ease-in-out;
+}

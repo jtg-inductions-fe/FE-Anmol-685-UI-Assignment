@@ -1,1 +1,29 @@
 // TODO: Add styles as per the requirement
+//1. Abstract
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+//2. vendors
+@import 'vendors/fonts';
+@import 'vendors/iconmon';
+
+//3. base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/utilities';
+
+//4. Layout
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+//5. components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+
+//6. Pages
+@import 'pages/home';
+
+// themes
+@import 'themes/themes';

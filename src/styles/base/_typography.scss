@@ -1,0 +1,142 @@
+body {
+    font-size: $fs-200;
+    line-height: 1.6;
+}
+
+// --- Header ---
+.header {
+    &__logo-text {
+        display: none;
+
+        span {
+            font-weight: $weight-regular;
+        }
+
+        @include respond-to('tablet') {
+            display: block;
+            font-size: $fs-700;
+            font-weight: $weight-bold;
+        }
+        @include respond-to('desktop') {
+            font-size: $fs-700;
+        }
+    }
+
+    &__dropdown-link {
+        font-weight: $weight-regular;
+        text-decoration: none;
+        font-size: $fs-200;
+    }
+
+    &__icon-text {
+        display: none;
+
+        @include respond-to('desktop') {
+            display: inline-block;
+            font-size: $fs-400;
+            font-weight: $weight-regular;
+        }
+    }
+}
+
+// --- Hero ---
+.hero {
+    &__heading {
+        font-weight: $weight-bold;
+        line-height: 1.2;
+        @include responsive-text($fs-300, $fs-900, $fs-900);
+    }
+
+    &__body {
+        font-weight: $weight-medium;
+        font-size: $fs-200;
+    }
+
+    &__search-input {
+        font-weight: $weight-regular;
+        font-size: $fs-200;
+    }
+}
+
+// --- Carousel ---
+.carousel {
+    &__heading {
+        font-weight: $weight-bold;
+        @include responsive-text($fs-300, $fs-600, $fs-800);
+    }
+
+    .card {
+        &__title {
+            font-weight: $weight-bold;
+            @include responsive-text($fs-800, $fs-200, $fs-200);
+        }
+
+        &__subtitle {
+            font-weight: $weight-bold;
+            font-size: $fs-300;
+        }
+
+        &__body {
+            font-weight: $weight-regular;
+            @include responsive-text($fs-100, $fs-100, $fs-200);
+        }
+
+        &__btn {
+            font-weight: $weight-bold;
+            text-transform: uppercase;
+            font-size: $fs-200;
+        }
+    }
+}
+
+// --- Previously Read ---
+.prev-read {
+    &__heading {
+        font-weight: $weight-light;
+        @include responsive-text($fs-200, $fs-500, $fs-800);
+    }
+
+    &__text-normal {
+        font-weight: $weight-bold;
+        @include responsive-text($fs-100, $fs-500, $fs-500);
+    }
+}
+
+// --- Email Section ---
+.email-section {
+    &__heading {
+        font-weight: $weight-medium;
+        @include responsive-text($fs-300, $fs-500, $fs-500);
+    }
+
+    &__body {
+        font-weight: $weight-light;
+        font-size: $fs-200;
+    }
+
+    &__input {
+        font-weight: $weight-regular;
+        font-size: $fs-200;
+    }
+}
+
+// --- Footer ---
+.footer {
+    &__by-text {
+        font-weight: $weight-regular;
+        @include responsive-text($fs-500, $fs-500, $fs-200);
+    }
+
+    &__text-normal {
+        display: none;
+
+        @include respond-to('tablet') {
+            display: block;
+            font-size: $fs-100;
+            font-weight: $weight-regular;
+        }
+        @include respond-to('desktop') {
+            font-size: $fs-100;
+        }
+    }
+}
