@@ -1,16 +1,16 @@
+@use 'sass:math';
+
 @mixin respond-to($breakpoint) {
     @if $breakpoint == 'tablet' {
-        @media (min-width: #{$bp-phone + 1}) {
+        @media (min-width: ($bp-phone + 1px)) {
             @content;
         }
-    }
-    @if $breakpoint == 'desktop' {
-        @media (min-width: #{$bp-tablet + 1}) {
+    } @else if $breakpoint == 'desktop' {
+        @media (min-width: ($bp-tablet + 1px)) {
             @content;
         }
-    }
-    @if $breakpoint == 'large' {
-        @media (min-width: #{$bp-large + 1}) {
+    } @else if $breakpoint == 'large' {
+        @media (min-width: ($bp-large + 1)) {
             @content;
         }
     }
@@ -53,4 +53,12 @@
 
 @mixin transition($prop: all, $time: 0.3s) {
     transition: $prop $time ease-in-out;
+}
+
+@function rem($pixels, $context: 16) {
+    @if (type-of($pixels) == 'number') and (not unitless($pixels)) {
+        $pixels: math.div($pixels, ($pixels * 0 + 1));
+    }
+
+    @return math.div($pixels, $context) * 1rem;
 }
