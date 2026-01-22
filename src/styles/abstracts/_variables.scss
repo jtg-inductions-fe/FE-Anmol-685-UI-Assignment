@@ -2,21 +2,20 @@
 $font-family-sans: 'Poppins', sans-serif;
 $font-family-serif: 'Josefin Sans', sans-serif;
 
-// --- Font Sizes ---
-$fs-100: 14px;
-$fs-200: 16px;
-$fs-300: 18px;
-$fs-400: 20px;
-$fs-500: 24px;
-$fs-600: 26px;
-$fs-700: 30px;
-$fs-800: 32px;
-$fs-900: 36px;
-
 //bps
-$break-point-large: 1728px;
-$break-point-medium: 1024px;
-$break-point-small: 428px;
+$break-point-large: 1729px;
+$break-point-medium: 1025px;
+$break-point-small: 431px;
 
 $icomoon-font-family: 'icomoon';
 $icomoon-font-path: '/assets/fonts';
+
+// Dimensions
+$header-height: 80px;
+$hamburger-size: 80px;
+$hamburger-line-width: 36px;
+$hamburger-line-height: 4px;
+$logo-height: 36px;
+$icon-box-size: 38px;
+$icon-size: 32px;
+$mobile-fav-size: 24px;

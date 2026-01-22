@@ -1,0 +1,350 @@
+.header {
+    background-color: $color-white;
+    height: $header-height;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+
+    &__container {
+        @include flex-between;
+        height: 100%;
+        padding: 0 1rem;
+        max-width: $break-point-large;
+        margin: 0 auto;
+
+        @include respond-to('tablet') {
+            padding: 0 2rem;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        height: 100%;
+    }
+
+    &__hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $hamburger-size;
+        height: $hamburger-size;
+        border-radius: 0;
+        margin-left: -1rem;
+
+        background: $color-white;
+        cursor: pointer;
+
+        @include respond-to('tablet') {
+            display: none;
+        }
+
+        &-line {
+            width: $hamburger-line-width;
+            height: $hamburger-line-height;
+
+            background: linear-gradient(
+                90deg,
+                $color-brand-dark,
+                $color-brand-light
+            );
+            position: relative;
+            transition: all 0.3s;
+            border-radius: 2px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+
+                background: linear-gradient(
+                    90deg,
+                    $color-brand-dark,
+                    $color-brand-light
+                );
+                left: 0;
+                transition: all 0.3s;
+                border-radius: 2px;
+            }
+
+            &::before {
+                top: -10px;
+            }
+            &::after {
+                top: 10px;
+            }
+        }
+
+        &--active {
+            background: linear-gradient(
+                90deg,
+                $color-brand-dark,
+                $color-brand-light
+            );
+
+            .header__hamburger-line {
+                background: $color-white;
+
+                &::before,
+                &::after {
+                    background: $color-white;
+                }
+            }
+        }
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: $color-brand-dark;
+    }
+
+    &__logo-img {
+        height: $logo-height;
+        width: auto;
+    }
+
+    &__brand-text {
+        display: none;
+        font-family: $font-family-serif;
+
+        @include respond-to('tablet') {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            font-size: $fs-700;
+            color: $color-brand-logo-text;
+        }
+
+        strong {
+            font-weight: $weight-bold;
+            color: $color-brand-dark;
+        }
+
+        span {
+            font-weight: $weight-bold;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @include respond-to('tablet') {
+            display: block;
+            height: 100%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        height: 100%;
+    }
+
+    &__menu-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $color-brand-dark;
+        }
+
+        &:hover .header__link {
+            color: $color-white;
+        }
+
+        &:hover .header__dropdown {
+            display: block;
+        }
+    }
+
+    &__link {
+        color: $color-brand-logo-text;
+        text-decoration: none;
+        margin-bottom: 0 !important;
+        transition: color 0.2s;
+        font-family: $font-family-sans;
+        font-weight: $weight-regular;
+        font-size: $fs-200;
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 200px;
+        background: $color-white;
+        border: 1px solid $color-border-light;
+        padding: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 200;
+
+        li {
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            font-family: $font-family-sans;
+            font-weight: $weight-regular;
+            font-size: $fs-200;
+
+            background: linear-gradient(
+                90deg,
+                $color-brand-dark,
+                $color-brand-light
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+
+            &:hover {
+                background: $color-brand-dark;
+                -webkit-background-clip: border-box;
+                -webkit-text-fill-color: $color-white;
+                color: $color-white;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__mobile-fav {
+        display: block;
+        text-decoration: none;
+
+        @include respond-to('tablet') {
+            display: none;
+        }
+
+        img {
+            width: $mobile-fav-size;
+            height: $icon-size + 6px;
+            display: block;
+        }
+    }
+
+    &__action-box {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: $color-brand-logo-text;
+    }
+
+    &__icon-box {
+        width: $icon-box-size;
+        height: $icon-box-size;
+        @include flex-center;
+    }
+
+    &__icon {
+        font-size: $icon-size;
+        color: $color-brand-dark;
+    }
+
+    &__action-text {
+        display: none;
+
+        @include respond-to('desktop') {
+            display: block;
+            font-family: $font-family-sans;
+            font-weight: $weight-regular;
+            font-size: $fs-400;
+        }
+    }
+
+    &__mobile-menu {
+        display: none;
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        width: 60%;
+        max-width: 300px;
+        background: $color-white;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 90;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__mobile-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__mobile-title {
+        color: $color-crousal-heading;
+        font-family: $font-family-sans;
+        font-weight: $weight-bold;
+        font-size: $fs-200;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $color-border-light;
+        text-transform: uppercase;
+    }
+
+    &__mobile-item a {
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        font-family: $font-family-sans;
+        font-weight: $weight-regular;
+        font-size: $fs-200;
+
+        background: linear-gradient(
+            90deg,
+            $color-brand-dark,
+            $color-brand-light
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+
+        &:active {
+            background: none;
+            -webkit-text-fill-color: $color-brand-dark;
+            color: $color-brand-dark;
+        }
+    }
+
+    &__mobile-highlight {
+        display: block;
+        text-decoration: none;
+
+        color: $color-crousal-heading;
+        font-family: $font-family-sans;
+        font-weight: $weight-bold;
+        font-size: $fs-200;
+        text-transform: uppercase;
+
+        margin-top: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $color-border-light;
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}
