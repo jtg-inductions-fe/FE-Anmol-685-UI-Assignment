@@ -1,0 +1,57 @@
+@use 'sass:math';
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'tablet' {
+        @media (min-width: $break-point-small) {
+            @content;
+        }
+    } @else if $breakpoint == 'desktop' {
+        @media (min-width: $break-point-medium) {
+            @content;
+        }
+    } @else if $breakpoint == 'large' {
+        @media (min-width: $break-point-large) {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-text($size-phone, $size-tablet, $size-desktop) {
+    font-size: $size-phone;
+    @include respond-to('tablet') {
+        font-size: $size-tablet;
+    }
+    @include respond-to('desktop') {
+        font-size: $size-desktop;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin transition($prop: all, $time: 0.3s) {
+    transition: $prop $time ease-in-out;
+}
+
+@function rem($pixels, $context: 16) {
+    @if (type-of($pixels) == 'number') and (not unitless($pixels)) {
+        $pixels: math.div($pixels, ($pixels * 0 + 1));
+    }
+
+    @return math.div($pixels, $context) * 1rem;
+}
