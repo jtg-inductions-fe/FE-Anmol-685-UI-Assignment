@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Alura Books</title>
         <link rel="stylesheet" href="src/styles/main.scss" />
+        <script type="module" src="./src/script/index.js"></script>
     </head>
     <body>
         <header class="header">
@@ -190,6 +191,24 @@
             </div>
         </header>
 
-        <script type="module" src="./src/script/index.js"></script>
+        <div class="hero">
+            <div class="hero__container">
+                <h2 class="hero__title">Do you know where to start?</h2>
+                <p class="hero__text">
+                    Find what you need for development on our bookself!
+                </p>
+
+                <div class="hero__search">
+                    <input type="search" class="hero__input" placeholder=" " />
+
+                    <div class="hero__overlay">
+                        <i class="icon-Search hero__icon"></i>
+                        <span class="hero__text-placeholder"
+                            >What will be your next read?</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
