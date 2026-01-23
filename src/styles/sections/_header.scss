@@ -1,26 +1,26 @@
 .header {
     background-color: $color-white;
-    height: $header-height;
+    height: rem(80);
     position: relative;
     z-index: 100;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.05);
 
     &__container {
         @include flex-between;
         height: 100%;
-        padding: 0 1rem;
         max-width: $break-point-large;
         margin: 0 auto;
+        padding: 0 rem(16) 0 0;
 
         @include respond-to('tablet') {
-            padding: 0 2rem;
+            padding: 0 rem(32);
         }
     }
 
     &__left {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: rem(16);
         height: 100%;
     }
 
@@ -28,22 +28,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: $hamburger-size;
-        height: $hamburger-size;
+
+        width: rem(80);
+        height: rem(80);
         border-radius: 0;
-        margin-left: -1rem;
 
         background: $color-white;
         cursor: pointer;
+        border: none;
+        transition: background 0.3s ease;
 
         @include respond-to('tablet') {
             display: none;
         }
 
         &-line {
-            width: $hamburger-line-width;
-            height: $hamburger-line-height;
-
+            width: rem(36);
+            height: rem(4);
             background: linear-gradient(
                 90deg,
                 $color-brand-dark,
@@ -51,7 +52,7 @@
             );
             position: relative;
             transition: all 0.3s;
-            border-radius: 2px;
+            border-radius: rem(2);
 
             &::before,
             &::after {
@@ -59,7 +60,6 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-
                 background: linear-gradient(
                     90deg,
                     $color-brand-dark,
@@ -67,14 +67,14 @@
                 );
                 left: 0;
                 transition: all 0.3s;
-                border-radius: 2px;
+                border-radius: rem(2);
             }
 
             &::before {
-                top: -10px;
+                top: rem(-10);
             }
             &::after {
-                top: 10px;
+                top: rem(10);
             }
         }
 
@@ -87,7 +87,6 @@
 
             .header__hamburger-line {
                 background: $color-white;
-
                 &::before,
                 &::after {
                     background: $color-white;
@@ -99,13 +98,13 @@
     &__brand {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: rem(10);
         text-decoration: none;
         color: $color-brand-dark;
     }
 
     &__logo-img {
-        height: $logo-height;
+        height: rem(36);
         width: auto;
     }
 
@@ -116,18 +115,17 @@
         @include respond-to('tablet') {
             display: flex;
             align-items: baseline;
-            gap: 5px;
+            gap: rem(5);
             font-size: $fs-700;
-            color: $color-brand-logo-text;
+            color: $african-turquoise;
         }
 
-        strong {
+        &__title {
             font-weight: $weight-bold;
-            color: $color-brand-dark;
         }
 
-        span {
-            font-weight: $weight-bold;
+        &__subtitle {
+            font-weight: $weight-light;
         }
     }
 
@@ -143,7 +141,7 @@
     &__menu {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: rem(8);
         height: 100%;
     }
 
@@ -152,7 +150,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        padding: 10px 15px;
+        padding: rem(10) rem(16);
         transition: background-color 0.3s ease;
 
         &:hover {
@@ -169,13 +167,19 @@
     }
 
     &__link {
-        color: $color-brand-logo-text;
+        color: $african-turquoise;
         text-decoration: none;
-        margin-bottom: 0 !important;
+        margin-bottom: 0;
         transition: color 0.2s;
-        font-family: $font-family-sans;
         font-weight: $weight-regular;
-        font-size: $fs-200;
+
+        font-size: rem(16);
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0;
     }
 
     &__dropdown {
@@ -183,22 +187,21 @@
         position: absolute;
         top: 100%;
         left: 0;
-        width: 200px;
+        width: rem(200);
         background: $color-white;
         border: 1px solid $color-border-light;
         padding: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 200;
+        box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
+        z-index: 48;
 
         li {
             margin-bottom: 0;
         }
 
-        a {
+        &__text-detail {
             text-decoration: none;
             display: block;
-            padding: 10px 15px;
-            font-family: $font-family-sans;
+            padding: rem(10) rem(15);
             font-weight: $weight-regular;
             font-size: $fs-200;
 
@@ -224,7 +227,7 @@
     &__actions {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: rem(24);
     }
 
     &__mobile-fav {
@@ -236,8 +239,7 @@
         }
 
         img {
-            width: $mobile-fav-size;
-            height: $icon-size + 6px;
+            width: rem(26);
             display: block;
         }
     }
@@ -245,20 +247,22 @@
     &__action-box {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: rem(8);
         text-decoration: none;
-        color: $color-brand-logo-text;
+        color: $african-turquoise;
     }
 
     &__icon-box {
-        width: $icon-box-size;
-        height: $icon-box-size;
+        width: rem(38);
+        height: rem(38);
         @include flex-center;
     }
 
     &__icon {
-        font-size: $icon-size;
-        color: $color-brand-dark;
+        width: rem(26);
+        height: rem(26);
+        display: block;
+        object-fit: contain;
     }
 
     &__action-text {
@@ -266,7 +270,6 @@
 
         @include respond-to('desktop') {
             display: block;
-            font-family: $font-family-sans;
             font-weight: $weight-regular;
             font-size: $fs-400;
         }
@@ -275,13 +278,13 @@
     &__mobile-menu {
         display: none;
         position: absolute;
-        top: $header-height;
+        top: rem(80);
         left: 0;
         width: 60%;
-        max-width: 300px;
+        max-width: rem(300);
         background: $color-white;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
+        box-shadow: rem(4) rem(4) rem(10) rgba(0, 0, 0, 0.1);
+        padding: rem(16);
         z-index: 90;
 
         &--active {
@@ -292,15 +295,14 @@
     &__mobile-list {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: rem(16);
     }
 
     &__mobile-title {
-        color: $color-crousal-heading;
-        font-family: $font-family-sans;
+        color: $satsuma;
         font-weight: $weight-bold;
         font-size: $fs-200;
-        padding-bottom: 0.5rem;
+        padding-bottom: rem(8);
         border-bottom: 1px solid $color-border-light;
         text-transform: uppercase;
     }
@@ -308,8 +310,7 @@
     &__mobile-item a {
         text-decoration: none;
         display: block;
-        padding: 5px 0;
-        font-family: $font-family-sans;
+        padding: rem(5) 0;
         font-weight: $weight-regular;
         font-size: $fs-200;
 
@@ -334,14 +335,13 @@
         display: block;
         text-decoration: none;
 
-        color: $color-crousal-heading;
-        font-family: $font-family-sans;
+        color: $satsuma;
         font-weight: $weight-bold;
         font-size: $fs-200;
         text-transform: uppercase;
 
-        margin-top: 1rem;
-        padding-bottom: 0.5rem;
+        margin-top: rem(16);
+        padding-bottom: rem(8);
         border-bottom: 1px solid $color-border-light;
         &:active {
             opacity: 0.7;
