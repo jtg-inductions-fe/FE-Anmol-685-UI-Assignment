@@ -10,7 +10,7 @@
         height: 100%;
         max-width: $break-point-large;
         margin: 0 auto;
-        padding: 0 rem(16) 0 0;
+        padding: 0 16 0 0;
 
         @include respond-to('tablet') {
             padding: 0 rem(32);
@@ -101,6 +101,11 @@
         gap: rem(10);
         text-decoration: none;
         color: $color-brand-dark;
+        margin-left: rem(-8);
+
+        @include respond-to('tablet') {
+            margin-left: 0;
+        }
     }
 
     &__logo-img {
@@ -228,6 +233,12 @@
         display: flex;
         align-items: center;
         gap: rem(24);
+
+        margin-right: rem(8);
+
+        @include respond-to('tablet') {
+            margin-right: 0;
+        }
     }
 
     &__mobile-fav {
