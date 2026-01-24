@@ -1,13 +1,195 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alura Books</title>
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <div>Hello World</div>
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__left">
+                    <div
+                        class="header__hamburger"
+                        id="hamburgerBtn"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Toggle mobile menu"
+                        aria-expanded="false"
+                        aria-controls="mobileMenu"
+                    >
+                        <div class="header__hamburger-line"></div>
+                    </div>
+
+                    <a
+                        href="#"
+                        class="header__brand"
+                        aria-label="Alura Books - Home"
+                    >
+                        <img
+                            src="/assets/icons/Logo.svg"
+                            alt=""
+                            class="header__logo-img"
+                            aria-hidden="true"
+                        />
+                        <span class="header__brand-text">
+                            <strong class="header__brand-text__title"
+                                >Alura</strong
+                            >
+                            <span class="header__brand-text__subtitle"
+                                >Books</span
+                            >
+                        </span>
+                    </a>
+                </div>
+
+                <nav class="header__nav" aria-label="Main Navigation">
+                    <ul class="header__menu">
+                        <li class="header__menu-item">
+                            <button
+                                type="button"
+                                class="header__link text-body"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                CATEGORIES
+                            </button>
+                            <ul
+                                class="header__dropdown"
+                                aria-label="Categories Submenu"
+                            >
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header__dropdown__text-detail"
+                                        >Programming</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header__dropdown__text-detail"
+                                        >Front-End</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header__dropdown__text-detail"
+                                        >Infrastructure</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header__dropdown__text-detail"
+                                        >Business</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        class="header__dropdown__text-detail"
+                                        >Design & UX</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__link text-body"
+                                >MY BOOKSHELF</a
+                            >
+                        </li>
+                        <li class="header__menu-item">
+                            <a href="#" class="header__link text-body"
+                                >FAVORITES</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__actions">
+                    <a
+                        href="#"
+                        class="header__mobile-fav"
+                        aria-label="My Favorites"
+                    >
+                        <img
+                            src="/assets/icons/Favoritos.svg"
+                            alt=""
+                            aria-hidden="true"
+                            class="header__icon"
+                        />
+                    </a>
+
+                    <a
+                        href="#"
+                        class="header__action-box"
+                        aria-label="Shopping Bag"
+                    >
+                        <span class="header__icon-box">
+                            <img
+                                src="/assets/icons/mybag.svg"
+                                alt=""
+                                aria-hidden="true"
+                                class="header__icon"
+                            />
+                        </span>
+                        <span class="heading-6 header__action-text"
+                            >My Bag</span
+                        >
+                    </a>
+
+                    <a
+                        href="#"
+                        class="header__action-box"
+                        aria-label="User Profile"
+                    >
+                        <span class="header__icon-box">
+                            <img
+                                src="/assets/icons/profile.svg"
+                                alt=""
+                                aria-hidden="true"
+                                class="header__icon"
+                            />
+                        </span>
+                        <span class="heading-6 header__action-text"
+                            >My Profile</span
+                        >
+                    </a>
+                </div>
+            </div>
+
+            <div class="header__mobile-menu" id="mobileMenu" aria-hidden="true">
+                <ul class="header__mobile-list">
+                    <li class="header__mobile-title heading-4">Categories</li>
+
+                    <li class="header__mobile-item">
+                        <a href="#" class="text-body">Programming</a>
+                    </li>
+                    <li class="header__mobile-item">
+                        <a href="#" class="text-body">Front-End</a>
+                    </li>
+                    <li class="header__mobile-item">
+                        <a href="#" class="text-body">Infrastructure</a>
+                    </li>
+                    <li class="header__mobile-item">
+                        <a href="#" class="text-body">Business</a>
+                    </li>
+                    <li class="header__mobile-item">
+                        <a href="#" class="text-body">Design & UX</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="header__mobile-title heading-4"
+                            >My Bookshelf</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </header>
+
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
