@@ -1,11 +1,8 @@
 .header {
     background-color: $color-white;
     height: rem(80);
-    height: rem(80);
     position: relative;
-    z-index: 100;
-    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.05);
-    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
 
     &__container {
         @include flex-between;
@@ -16,14 +13,12 @@
 
         @include respond-to('tablet') {
             padding: 0 rem(32);
-            padding: 0 rem(32);
         }
     }
 
     &__left {
         display: flex;
         align-items: center;
-        gap: rem(16);
         gap: rem(16);
         height: 100%;
     }
@@ -35,15 +30,10 @@
 
         width: rem(80);
         height: rem(80);
-
-        width: rem(80);
-        height: rem(80);
         border-radius: 0;
 
         background: $color-white;
         cursor: pointer;
-        border: none;
-        transition: background 0.3s ease;
         border: none;
         transition: background 0.3s ease;
 
@@ -54,8 +44,6 @@
         &-line {
             width: rem(36);
             height: rem(4);
-            width: rem(36);
-            height: rem(4);
             background: linear-gradient(
                 90deg,
                 $color-brand-dark,
@@ -63,8 +51,7 @@
             );
             position: relative;
             transition: all 0.3s;
-            border-radius: rem(2);
-            border-radius: rem(2);
+            border-radius: 2px;
 
             &::before,
             &::after {
@@ -79,16 +66,13 @@
                 );
                 left: 0;
                 transition: all 0.3s;
-                border-radius: rem(2);
-                border-radius: rem(2);
+                border-radius: 2px;
             }
 
             &::before {
                 top: rem(-10);
-                top: rem(-10);
             }
             &::after {
-                top: rem(10);
                 top: rem(10);
             }
         }
@@ -114,10 +98,8 @@
         display: flex;
         align-items: center;
         gap: rem(10);
-        gap: rem(10);
         text-decoration: none;
         color: $color-brand-dark;
-        margin-left: rem(-8);
 
         @include respond-to('tablet') {
             margin-left: 0;
@@ -125,7 +107,6 @@
     }
 
     &__logo-img {
-        height: rem(36);
         height: rem(36);
         width: auto;
     }
@@ -138,19 +119,14 @@
             display: flex;
             align-items: baseline;
             gap: rem(5);
-            gap: rem(5);
             font-size: $fs-700;
-            color: $african-turquoise;
             color: $african-turquoise;
         }
 
-        &__title {
         &__title {
             font-weight: $weight-bold;
         }
 
-        &__subtitle {
-            font-weight: $weight-light;
         &__subtitle {
             font-weight: $weight-light;
         }
@@ -169,7 +145,6 @@
         display: flex;
         align-items: center;
         gap: rem(8);
-        gap: rem(8);
         height: 100%;
     }
 
@@ -178,7 +153,6 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        padding: rem(10) rem(16);
         padding: rem(10) rem(16);
         transition: background-color 0.3s ease;
 
@@ -197,23 +171,11 @@
 
     &__link {
         color: $african-turquoise;
-        color: $african-turquoise;
         text-decoration: none;
-        margin-bottom: 0;
         margin-bottom: 0;
         transition: color 0.2s;
         font-weight: $weight-regular;
-
         font-size: rem(16);
-
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-        padding: 0;
-
-        font-size: rem(16);
-
         background: transparent;
         border: none;
         cursor: pointer;
@@ -227,13 +189,10 @@
         top: 100%;
         left: 0;
         width: rem(200);
-        width: rem(200);
         background: $color-white;
         border: 1px solid $color-border-light;
         padding: 0;
-        box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
-        z-index: 48;
-        box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 48;
 
         li {
@@ -241,10 +200,8 @@
         }
 
         &__text-detail {
-        &__text-detail {
             text-decoration: none;
             display: block;
-            padding: rem(10) rem(15);
             padding: rem(10) rem(15);
             font-weight: $weight-regular;
             font-size: $fs-200;
@@ -272,6 +229,11 @@
         display: flex;
         align-items: center;
         gap: rem(24);
+        margin-right: rem(8);
+
+        @include respond-to('tablet') {
+            margin-right: 0;
+        }
     }
 
     &__mobile-fav {
@@ -284,7 +246,6 @@
 
         img {
             width: rem(26);
-            width: rem(26);
             display: block;
         }
     }
@@ -293,25 +254,17 @@
         display: flex;
         align-items: center;
         gap: rem(8);
-        gap: rem(8);
         text-decoration: none;
-        color: $african-turquoise;
         color: $african-turquoise;
     }
 
     &__icon-box {
         width: rem(38);
         height: rem(38);
-        width: rem(38);
-        height: rem(38);
         @include flex-center;
     }
 
     &__icon {
-        width: rem(26);
-        height: rem(26);
-        display: block;
-        object-fit: contain;
         width: rem(26);
         height: rem(26);
         display: block;
@@ -330,19 +283,14 @@
 
     &__mobile-menu {
         display: none;
-        position: absolute;
-        top: rem(80);
-        top: rem(80);
+        position: relative;
         left: 0;
         width: 60%;
         max-width: rem(300);
-        max-width: rem(300);
         background: $color-white;
-        box-shadow: rem(4) rem(4) rem(10) rgba(0, 0, 0, 0.1);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
         padding: rem(16);
-        box-shadow: rem(4) rem(4) rem(10) rgba(0, 0, 0, 0.1);
-        padding: rem(16);
-        z-index: 90;
+        z-index: 48;
 
         &--active {
             display: block;
@@ -353,15 +301,12 @@
         display: flex;
         flex-direction: column;
         gap: rem(16);
-        gap: rem(16);
     }
 
     &__mobile-title {
         color: $satsuma;
-        color: $satsuma;
         font-weight: $weight-bold;
         font-size: $fs-200;
-        padding-bottom: rem(8);
         padding-bottom: rem(8);
         border-bottom: 1px solid $color-border-light;
         text-transform: uppercase;
@@ -370,7 +315,6 @@
     &__mobile-item a {
         text-decoration: none;
         display: block;
-        padding: rem(5) 0;
         padding: rem(5) 0;
         font-weight: $weight-regular;
         font-size: $fs-200;
@@ -397,13 +341,10 @@
         text-decoration: none;
 
         color: $satsuma;
-        color: $satsuma;
         font-weight: $weight-bold;
         font-size: $fs-200;
         text-transform: uppercase;
 
-        margin-top: rem(16);
-        padding-bottom: rem(8);
         margin-top: rem(16);
         padding-bottom: rem(8);
         border-bottom: 1px solid $color-border-light;
