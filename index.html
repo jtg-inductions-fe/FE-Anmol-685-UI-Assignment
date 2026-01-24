@@ -5,7 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Alura Books</title>
         <link rel="stylesheet" href="src/styles/main.scss" />
-        <script type="module" src="./src/script/index.js" defer></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
     </head>
     <body>
         <header class="header">
@@ -208,5 +212,124 @@
                 </div>
             </div>
         </div>
+
+        <section class="latest-releases">
+            <div class="latest-releases__container">
+                <h2 class="latest-releases__heading">LATEST RELEASES</h2>
+            </div>
+
+            <div class="latest-releases__background">
+                <div class="latest-releases__wrapper">
+                    <div class="latest-releases__carousel-col">
+                        <div class="swiper-button-prev custom-nav-btn"></div>
+                        <div class="swiper-button-next custom-nav-btn"></div>
+
+                        <div class="swiper-pagination custom-dots"></div>
+
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/Arquitetura.webp"
+                                        alt="Book 1"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/Construct2.webp"
+                                        alt="Book 2"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/Gestão.webp"
+                                        alt="Book 3"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/MetricasAgeis.webp"
+                                        alt="Book 4"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/Nodejs.webp"
+                                        alt="Book 5"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/Portugol.webp"
+                                        alt="Book 6"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/ReactNative.webp"
+                                        alt="Book 7"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/Tuning.webp"
+                                        alt="Book 8"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/assets/images/UX.webp"
+                                        alt="Book 9"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="latest-releases__card">
+                        <div class="card__details">
+                            <div class="card__header">
+                                <h3 class="card__title">
+                                    You might also be interested in...
+                                </h3>
+                                <h4 class="card__author">Juliana Agarikov</h4>
+                            </div>
+
+                            <p class="card__description">
+                                Angular 11 and Firebase: Building an integrated
+                                application with the Google platform.
+                            </p>
+
+                            <div class="card__actions">
+                                <button class="card__icon-btn">
+                                    <img
+                                        src="/assets/icons/Favoritos.svg"
+                                        alt="Favorite"
+                                    />
+                                </button>
+                                <button class="card__icon-btn">
+                                    <img
+                                        src="/assets/icons/mybag.svg"
+                                        alt="Shopping Bag"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="card__image-col">
+                            <img
+                                src="/assets/images/Perfil-escritora 1.webp"
+                                alt="Book Cover"
+                                class="card__img"
+                            />
+                            <a href="#" class="card__link">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
