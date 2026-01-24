@@ -1,0 +1,102 @@
+.footer {
+    background-color: $color-white;
+    padding: rem(32) rem(16);
+    border-top: 1px solid $color-border-light;
+
+    &__container {
+        max-width: $break-point-large;
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+
+    &__mobile-title {
+        display: block;
+        text-align: center;
+        font-weight: $weight-regular;
+        color: $african-turquoise;
+
+        @include respond-to('tablet') {
+            display: none;
+        }
+    }
+
+    &__content-desktop {
+        display: none;
+
+        @include respond-to('tablet') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(32);
+            padding-top: rem(16);
+        }
+
+        @include respond-to('desktop') {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__brand-title {
+        font-weight: $weight-regular;
+        font-size: rem(24);
+        color: $african-turquoise;
+        margin: 0;
+    }
+
+    &__list-column {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+
+        @include respond-to('tablet') {
+            padding-left: rem(12);
+            border-left: none;
+        }
+
+        @include respond-to('desktop') {
+            border-left: 1px solid $gunsmoke;
+            padding-left: rem(24);
+        }
+    }
+
+    &__list-heading {
+        font-weight: $weight-regular;
+        color: $gunsmoke;
+        margin-bottom: rem(8);
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        text-decoration: none;
+        font-weight: $weight-regular;
+        color: $gunsmoke;
+
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__item-icon {
+        width: rem(35);
+        height: rem(35);
+        object-fit: contain;
+    }
+}
