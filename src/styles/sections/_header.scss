@@ -11,33 +11,39 @@
         margin: 0 auto;
         padding: 0 rem(16) 0 0;
 
-        @include respond-to('tablet') {
-            padding: 0 rem(32);
+        @include respond-to('desktop') {
+            padding: 0 rem(64);
         }
     }
 
     &__left {
         display: flex;
         align-items: center;
-        gap: rem(16);
         height: 100%;
+        gap: rem(8);
+
+        @include respond-to('tablet') {
+            gap: rem(8);
+        }
     }
 
     &__hamburger {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        width: rem(80);
+        width: rem(64);
         height: rem(80);
         border-radius: 0;
-
         background: $color-white;
         cursor: pointer;
         border: none;
         transition: background 0.3s ease;
 
         @include respond-to('tablet') {
+            width: rem(64);
+        }
+
+        @include respond-to('desktop') {
             display: none;
         }
 
@@ -72,6 +78,7 @@
             &::before {
                 top: rem(-10);
             }
+
             &::after {
                 top: rem(10);
             }
@@ -86,6 +93,7 @@
 
             .header__hamburger-line {
                 background: $color-white;
+
                 &::before,
                 &::after {
                     background: $color-white;
@@ -97,11 +105,12 @@
     &__brand {
         display: flex;
         align-items: center;
-        gap: rem(10);
         text-decoration: none;
         color: $color-brand-dark;
+        gap: rem(4);
 
         @include respond-to('tablet') {
+            gap: rem(8);
             margin-left: 0;
         }
     }
@@ -118,7 +127,7 @@
         @include respond-to('tablet') {
             display: flex;
             align-items: baseline;
-            gap: rem(5);
+            gap: rem(6);
             font-size: $fs-700;
             color: $african-turquoise;
         }
@@ -135,7 +144,7 @@
     &__nav {
         display: none;
 
-        @include respond-to('tablet') {
+        @include respond-to('desktop') {
             display: block;
             height: 100%;
         }
@@ -202,10 +211,9 @@
         &__text-detail {
             text-decoration: none;
             display: block;
-            padding: rem(10) rem(15);
+            padding: rem(10) rem(16);
             font-weight: $weight-regular;
             font-size: $fs-200;
-
             background: linear-gradient(
                 90deg,
                 $color-brand-dark,
@@ -228,10 +236,11 @@
     &__actions {
         display: flex;
         align-items: center;
-        gap: rem(24);
+        gap: rem(12);
         margin-right: rem(8);
 
         @include respond-to('tablet') {
+            gap: rem(16);
             margin-right: 0;
         }
     }
@@ -240,12 +249,13 @@
         display: block;
         text-decoration: none;
 
-        @include respond-to('tablet') {
+        @include respond-to('desktop') {
             display: none;
         }
 
         img {
             width: rem(26);
+            padding: rem(6);
             display: block;
         }
     }
@@ -318,7 +328,6 @@
         padding: rem(5) 0;
         font-weight: $weight-regular;
         font-size: $fs-200;
-
         background: linear-gradient(
             90deg,
             $color-brand-dark,
@@ -339,15 +348,14 @@
     &__mobile-highlight {
         display: block;
         text-decoration: none;
-
         color: $satsuma;
         font-weight: $weight-bold;
         font-size: $fs-200;
         text-transform: uppercase;
-
         margin-top: rem(16);
         padding-bottom: rem(8);
         border-bottom: 1px solid $color-border-light;
+
         &:active {
             opacity: 0.7;
         }
