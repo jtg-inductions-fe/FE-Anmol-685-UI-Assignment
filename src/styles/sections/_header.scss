@@ -241,11 +241,11 @@
 
         @include respond-to('tablet') {
             gap: rem(16);
-            margin-right: 16;
+            margin-right: rem(16);
         }
 
         @include respond-to('desktop') {
-            margin-right: 0;
+            margin-right: rem(0);
         }
     }
 
