@@ -323,9 +323,10 @@
         padding-bottom: rem(8);
         border-bottom: 1px solid $color-border-light;
         text-transform: uppercase;
+        text-decoration: none;
     }
 
-    &__mobile-item a {
+    &__mobile-item {
         text-decoration: none;
         display: block;
         padding: rem(5) 0;
@@ -345,22 +346,6 @@
             background: none;
             -webkit-text-fill-color: $color-brand-dark;
             color: $color-brand-dark;
-        }
-    }
-
-    &__mobile-highlight {
-        display: block;
-        text-decoration: none;
-        color: $satsuma;
-        font-weight: $weight-bold;
-        font-size: $fs-200;
-        text-transform: uppercase;
-        margin-top: rem(16);
-        padding-bottom: rem(8);
-        border-bottom: 1px solid $color-border-light;
-
-        &:active {
-            opacity: 0.7;
         }
     }
 }
