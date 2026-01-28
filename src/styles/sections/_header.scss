@@ -28,10 +28,6 @@
         @include respond-to('tablet') {
             gap: rem(8);
         }
-
-        @include respond-to('tablet') {
-            gap: rem(8);
-        }
     }
 
     &__hamburger {
@@ -48,10 +44,6 @@
         transition: background 0.3s ease;
 
         @include respond-to('tablet') {
-            width: rem(64);
-        }
-
-        @include respond-to('desktop') {
             width: rem(64);
         }
 
@@ -120,10 +112,8 @@
         text-decoration: none;
         color: $color-brand-dark;
         gap: rem(4);
-        gap: rem(4);
 
         @include respond-to('tablet') {
-            gap: rem(8);
             gap: rem(8);
             margin-left: 0;
         }
@@ -225,14 +215,9 @@
             text-decoration: none;
             display: block;
             padding: rem(10) rem(16);
-            padding: rem(10) rem(16);
             font-weight: $weight-regular;
             font-size: $fs-200;
-            background: linear-gradient(
-                90deg,
-                $color-brand-dark,
-                $color-brand-light
-            );
+            background: linear-gradient(90deg, $color-brand-dark);
             background-clip: text;
             color: transparent;
 
