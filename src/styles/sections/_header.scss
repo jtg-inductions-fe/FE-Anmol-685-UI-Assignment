@@ -35,7 +35,6 @@
         justify-content: center;
         align-items: center;
         width: rem(64);
-        width: rem(64);
         height: rem(80);
         border-radius: 0;
         background: $color-white;
@@ -132,6 +131,7 @@
             display: flex;
             align-items: baseline;
             gap: rem(6);
+            font-size: $fs-700;
             color: $african-turquoise;
         }
 
@@ -147,6 +147,7 @@
     &__nav {
         display: none;
 
+        @include respond-to('desktop') {
         @include respond-to('desktop') {
             display: block;
             height: 100%;
