@@ -69,3 +69,9 @@
         content: $icon-Email;
     }
 }
+
+.icon-favorite {
+    &:before {
+        content: $icon-favourite;
+    }
+}

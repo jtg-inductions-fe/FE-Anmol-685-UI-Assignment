@@ -1,0 +1,145 @@
+.hero {
+    background: linear-gradient(90deg, $color-brand-dark, $color-brand-light);
+    position: relative;
+    height: rem(216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 rem(16);
+
+    @include respond-to('tablet') {
+        height: rem(330);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: $break-point-large;
+    }
+
+    &__title {
+        color: $color-white;
+        font-weight: $weight-bold;
+        font-size: rem(18);
+
+        @include respond-to('tablet') {
+            font-size: $fs-900;
+        }
+    }
+
+    &__text {
+        color: $color-white;
+        width: 100%;
+        max-width: rem(316);
+        margin-bottom: rem(24);
+        @include respond-to('tablet') {
+            max-width: rem(560);
+        }
+    }
+
+    &__search {
+        position: relative;
+        width: 100%;
+        max-width: rem(380);
+        height: rem(44);
+        border: 1px solid $color-white;
+        border-radius: 24px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond-to('tablet') {
+            max-width: rem(476);
+            height: rem(56);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        border-radius: 24px;
+        outline: none;
+
+        color: $color-white;
+        text-align: center;
+        padding: 0 2rem;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+        }
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:not(:placeholder-shown) + .hero__overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            appearance: none;
+
+            height: rem(16);
+            width: rem(16);
+
+            background-image: url('/assets/icons/cancel.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+
+            margin-right: rem(10);
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        @include respond-to('tablet') {
+            font-size: $fs-200;
+        }
+    }
+
+    &__overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(10);
+
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: opacity 0.2s;
+
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 rem(10);
+    }
+
+    &__icon {
+        color: $color-white;
+        font-size: $fs-400;
+        flex-shrink: 0;
+    }
+
+    &__text-placeholder {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
