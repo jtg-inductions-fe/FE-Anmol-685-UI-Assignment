@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Alura Books</title>
         <link rel="stylesheet" href="src/styles/main.scss" />
-
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="module" src="./src/script/index.js"></script>
     </head>
     <body>
         <header class="header">
@@ -215,7 +216,9 @@
 
         <section class="latest-releases">
             <div class="latest-releases__container">
-                <h2 class="latest-releases__heading">LATEST RELEASES</h2>
+                <h2 class="latest-releases__heading text-small">
+                    LATEST RELEASES
+                </h2>
             </div>
 
             <div class="latest-releases__background">
@@ -252,7 +255,7 @@
                     <div class="latest-releases__card">
                         <div class="card__details">
                             <div class="card__header">
-                                <h3 class="card__title">
+                                <h3 class="card__title heading-3">
                                     You might also be interested in...
                                 </h3>
                                 <h4 class="card__author">Juliana Agarikov</h4>
@@ -264,22 +267,12 @@
                             </p>
 
                             <div class="card__actions">
-                                <button class="card__icon-btn">
-                                    <img
-                                        src="/assets/icons/Favoritos.svg"
-                                        alt="Favorite"
-                                        loading="lazy"
-                                        aria-hidden="true"
-                                    />
-                                </button>
-                                <button class="card__icon-btn">
-                                    <img
-                                        src="/assets/icons/mybag.svg"
-                                        alt="Shopping Bag"
-                                        loading="lazy"
-                                        aria-hidden="true"
-                                    />
-                                </button>
+                                <button
+                                    class="card__icon-btn icon-favorite"
+                                ></button>
+                                <button
+                                    class="card__icon-btn icon-Bag"
+                                ></button>
                             </div>
                         </div>
 
@@ -287,7 +280,7 @@
                             <img
                                 src="/assets/images/Perfil-escritora 1.webp"
                                 alt="Book Cover"
-                                class="card__img"
+                                class="card__img heading-3"
                                 loading="lazy"
                             />
                             <a href="#" class="card__link">Learn more</a>
@@ -296,8 +289,5 @@
                 </div>
             </div>
         </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>

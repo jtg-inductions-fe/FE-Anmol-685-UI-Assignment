@@ -17,6 +17,14 @@ body {
 .heading-3 {
     font-weight: $weight-bold;
     font-size: $fs-700;
+
+    @include respond-to('tablet') {
+        font-size: rem($fs-600);
+    }
+
+    @include respond-to('desktop') {
+        font-size: rem($fs-700);
+    }
 }
 
 .heading-4 {
@@ -40,6 +48,15 @@ body {
 
 .text-small {
     font-size: $fs-300;
+    font-weight: $weight-bold;
+
+    @include respond-to('tablet') {
+        font-size: rem(26);
+    }
+
+    @include respond-to('desktop') {
+        font-size: rem(32);
+    }
 }
 
 .text-detail {
