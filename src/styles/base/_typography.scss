@@ -14,12 +14,22 @@ a {
 }
 
 .heading-2 {
+    color: $color-white;
     font-weight: $weight-bold;
-    font-size: $fs-800;
+    font-size: $fs-200;
+
+    @include respond-to('tablet') {
+        font-size: $fs-500;
+    }
+
+    @include respond-to('desktop') {
+        font-size: $fs-800;
+    }
 }
 
 .heading-3 {
-    font-weight: $weight-bold;
+    color: $color-white;
+    font-weight: $weight-light;
     font-size: $fs-700;
 
     @include respond-to('tablet') {

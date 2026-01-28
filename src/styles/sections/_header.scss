@@ -13,8 +13,9 @@
 
         @include respond-to('desktop') {
             padding: 0 rem(64);
-        @include respond-to('desktop') {
-            padding: 0 rem(64);
+            @include respond-to('desktop') {
+                padding: 0 rem(64);
+            }
         }
     }
 
@@ -27,7 +28,6 @@
         @include respond-to('tablet') {
             gap: rem(8);
         }
-        gap: rem(8);
 
         @include respond-to('tablet') {
             gap: rem(8);
@@ -91,7 +91,6 @@
                 top: rem(-10);
             }
 
-
             &::after {
                 top: rem(10);
             }
@@ -106,7 +105,6 @@
 
             .header__hamburger-line {
                 background: $color-white;
-
 
                 &::before,
                 &::after {
