@@ -13,9 +13,6 @@
 
         @include respond-to('desktop') {
             padding: 0 rem(64);
-            @include respond-to('desktop') {
-                padding: 0 rem(64);
-            }
         }
     }
 
@@ -131,7 +128,6 @@
             display: flex;
             align-items: baseline;
             gap: rem(6);
-            font-size: $fs-700;
             color: $african-turquoise;
         }
 
@@ -147,7 +143,6 @@
     &__nav {
         display: none;
 
-        @include respond-to('desktop') {
         @include respond-to('desktop') {
             display: block;
             height: 100%;
