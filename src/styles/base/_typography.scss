@@ -4,6 +4,10 @@ body {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+}
+
 .heading-1 {
     font-weight: $weight-bold;
     font-size: $fs-900;
@@ -67,4 +71,5 @@ body {
 
 .text-tiny {
     font-size: $fs-100;
+    color: $full-white;
 }

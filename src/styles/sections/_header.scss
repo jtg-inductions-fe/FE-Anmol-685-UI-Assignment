@@ -13,6 +13,8 @@
 
         @include respond-to('desktop') {
             padding: 0 rem(64);
+        @include respond-to('desktop') {
+            padding: 0 rem(64);
         }
     }
 
@@ -25,12 +27,18 @@
         @include respond-to('tablet') {
             gap: rem(8);
         }
+        gap: rem(8);
+
+        @include respond-to('tablet') {
+            gap: rem(8);
+        }
     }
 
     &__hamburger {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: rem(64);
         width: rem(64);
         height: rem(80);
         border-radius: 0;
@@ -40,6 +48,10 @@
         transition: background 0.3s ease;
 
         @include respond-to('tablet') {
+            width: rem(64);
+        }
+
+        @include respond-to('desktop') {
             width: rem(64);
         }
 
@@ -79,6 +91,7 @@
                 top: rem(-10);
             }
 
+
             &::after {
                 top: rem(10);
             }
@@ -94,6 +107,7 @@
             .header__hamburger-line {
                 background: $color-white;
 
+
                 &::before,
                 &::after {
                     background: $color-white;
@@ -108,8 +122,10 @@
         text-decoration: none;
         color: $color-brand-dark;
         gap: rem(4);
+        gap: rem(4);
 
         @include respond-to('tablet') {
+            gap: rem(8);
             gap: rem(8);
             margin-left: 0;
         }
@@ -210,6 +226,7 @@
         &__text-detail {
             text-decoration: none;
             display: block;
+            padding: rem(10) rem(16);
             padding: rem(10) rem(16);
             font-weight: $weight-regular;
             font-size: $fs-200;
