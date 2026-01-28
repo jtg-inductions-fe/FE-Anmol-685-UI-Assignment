@@ -128,7 +128,6 @@
             display: flex;
             align-items: baseline;
             gap: rem(6);
-            font-size: $fs-700;
             color: $african-turquoise;
         }
 
@@ -219,15 +218,11 @@
                 $color-brand-dark,
                 $color-brand-light
             );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
             color: transparent;
 
             &:hover {
                 background: $color-brand-dark;
-                -webkit-background-clip: border-box;
-                -webkit-text-fill-color: $color-white;
                 color: $color-white;
             }
         }
@@ -255,12 +250,6 @@
         @include respond-to('desktop') {
             display: none;
         }
-
-        img {
-            width: rem(26);
-            padding: rem(6);
-            display: block;
-        }
     }
 
     &__action-box {
@@ -278,10 +267,23 @@
     }
 
     &__icon {
-        width: rem(26);
-        height: rem(26);
         display: block;
         object-fit: contain;
+        background: transparent;
+        color: $green-vogue;
+        border: none;
+        font-size: rem(32);
+        cursor: pointer;
+    }
+
+    &__icon_fav {
+        display: block;
+        object-fit: contain;
+        background: transparent;
+        color: $green-vogue;
+        border: none;
+        font-size: rem(30);
+        cursor: pointer;
     }
 
     &__action-text {
@@ -341,11 +343,5 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
-
-        &:active {
-            background: none;
-            -webkit-text-fill-color: $color-brand-dark;
-            color: $color-brand-dark;
-        }
     }
 }

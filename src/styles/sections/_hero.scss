@@ -139,8 +139,6 @@
     }
 
     &__text-placeholder {
-        color: $color-white;
-        font-size: $fs-200;
         text-overflow: ellipsis;
         overflow: hidden;
     }
