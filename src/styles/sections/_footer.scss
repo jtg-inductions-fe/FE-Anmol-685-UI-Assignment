@@ -12,8 +12,6 @@
     &__mobile-title {
         display: block;
         text-align: center;
-        font-weight: $weight-regular;
-        color: $african-turquoise;
 
         @include respond-to('tablet') {
             display: none;
@@ -83,10 +81,6 @@
         display: flex;
         align-items: center;
         gap: rem(10);
-        text-decoration: none;
-        font-weight: $weight-regular;
-        color: $gunsmoke;
-
         transition: opacity 0.2s;
 
         &:hover {

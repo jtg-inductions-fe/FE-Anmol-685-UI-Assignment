@@ -210,7 +210,7 @@
 
                     <div class="hero__overlay">
                         <i class="icon-Search hero__icon"></i>
-                        <span class="hero__text-placeholder">
+                        <span class="hero__text-placeholder text-detail">
                             What will be your next read?
                         </span>
                     </div>
@@ -220,7 +220,9 @@
 
         <section class="latest-releases">
             <div class="latest-releases__container">
-                <h2 class="latest-releases__heading">LATEST RELEASES</h2>
+                <h2 class="latest-releases__heading text-small">
+                    LATEST RELEASES
+                </h2>
             </div>
 
             <div class="latest-releases__background">
@@ -250,62 +252,6 @@
                                         loading="lazy"
                                     />
                                 </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/Construct2.webp"
-                                        alt="Book 2"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/Gestão.webp"
-                                        alt="Book 3"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/MetricasAgeis.webp"
-                                        alt="Book 4"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/Nodejs.webp"
-                                        alt="Book 5"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/Portugol.webp"
-                                        alt="Book 6"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/ReactNative.webp"
-                                        alt="Book 7"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/Tuning.webp"
-                                        alt="Book 8"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                <div class="swiper-slide">
-                                    <img
-                                        src="/assets/images/UX.webp"
-                                        alt="Book 9"
-                                        loading="lazy"
-                                    />
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -313,7 +259,7 @@
                     <div class="latest-releases__card">
                         <div class="card__details">
                             <div class="card__header">
-                                <h3 class="card__title">
+                                <h3 class="card__title heading-3">
                                     You might also be interested in...
                                 </h3>
                                 <h4 class="card__author">Juliana Agarikov</h4>
@@ -325,23 +271,12 @@
                             </p>
 
                             <div class="card__actions">
-                                <button class="card__icon-btn">
-                                    <img
-                                        src="/assets/icons/Favoritos.svg"
-                                        alt="Favorite"
-                                        loading="lazy"
-                                        \
-                                        aria-hidden="true"
-                                    />
-                                </button>
-                                <button class="card__icon-btn">
-                                    <img
-                                        src="/assets/icons/mybag.svg"
-                                        alt="Shopping Bag"
-                                        loading="lazy"
-                                        aria-hidden="true"
-                                    />
-                                </button>
+                                <button
+                                    class="card__icon-btn icon-favorite"
+                                ></button>
+                                <button
+                                    class="card__icon-btn icon-Bag"
+                                ></button>
                             </div>
                         </div>
 
@@ -349,7 +284,7 @@
                             <img
                                 src="/assets/images/Perfil-escritora 1.webp"
                                 alt="Book Cover"
-                                class="card__img"
+                                class="card__img heading-3"
                                 loading="lazy"
                             />
                             <a href="#" class="card__link">Learn more</a>
@@ -361,19 +296,37 @@
 
         <div class="topics">
             <div class="container topics__container">
-                <h2 class="topics__heading">Recently Visited Topics</h2>
+                <h2 class="topics__heading heading-3">
+                    Recently Visited Topics
+                </h2>
 
                 <ul class="topics__list">
-                    <li><a href="#" class="topics__link">Android</a></li>
-                    <li><a href="#" class="topics__link">Marketing</a></li>
                     <li>
-                        <a href="#" class="topics__link">Agile Methodology</a>
+                        <a href="#" class="topics__link text-chip">Android</a>
                     </li>
-                    <li><a href="#" class="topics__link">Startups</a></li>
-                    <li><a href="#" class="topics__link">HTML & CSS</a></li>
-                    <li><a href="#" class="topics__link">Python</a></li>
-                    <li><a href="#" class="topics__link">UX Design</a></li>
-                    <li><a href="#" class="topics__link">Java</a></li>
+                    <li>
+                        <a href="#" class="topics__link text-chip">Marketing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="topics__link text-chip"
+                            >Agile Methodology</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="topics__link text-chip">Startups</a>
+                    </li>
+                    <li>
+                        <a href="#" class="topics__link text-chip"
+                            >HTML & CSS</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="topics__link text-chip">Python</a>
+                    </li>
+                    <li>
+                        <a href="#" class="topics__link text-chip">UX Design</a>
+                    </li>
+                    <li><a href="#" class="topics__link text-chip">Java</a></li>
                 </ul>
             </div>
         </div>
@@ -381,10 +334,10 @@
         <div class="newsletter">
             <div class="newsletter__container">
                 <div class="newsletter__content">
-                    <h2 class="newsletter__title">
+                    <h2 class="newsletter__title heading-1">
                         Stay up to date with latest news!
                     </h2>
-                    <p class="newsletter__text">
+                    <p class="newsletter__text text-detail">
                         Updates on e-books, permotions, and more.
                     </p>
                 </div>
@@ -395,7 +348,7 @@
 
                         <input
                             type="email"
-                            class="newsletter__input"
+                            class="newsletter__input text-detail"
                             placeholder="Enter your email"
                             aria-label="Email address"
                         />
@@ -406,7 +359,7 @@
 
         <footer class="footer" role="contentinfo">
             <div class="container footer__container">
-                <h2 class="footer__mobile-title .text-detail">Grupo Alura</h2>
+                <h2 class="footer__mobile-title text-detail">Grupo Alura</h2>
 
                 <div class="footer__content-desktop">
                     <div class="footer__col-brand">
