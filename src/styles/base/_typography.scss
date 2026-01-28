@@ -9,8 +9,13 @@ a {
 }
 
 .heading-1 {
-    font-weight: $weight-bold;
-    font-size: $fs-900;
+    color: linear-gradient(90, $color-brand-dark, $color-brand-light);
+    font-weight: $weight-medium;
+    font-size: $fs-300;
+
+    @include respond-to('tablet') {
+        font-size: $fs-500;
+    }
 }
 
 .heading-2 {
@@ -61,6 +66,7 @@ a {
 }
 
 .text-small {
+    font-weight: $weight-medium;
     font-size: $fs-300;
     font-weight: $weight-bold;
 

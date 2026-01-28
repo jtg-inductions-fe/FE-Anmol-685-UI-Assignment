@@ -13,9 +13,6 @@
 
         @include respond-to('desktop') {
             padding: 0 rem(64);
-            @include respond-to('desktop') {
-                padding: 0 rem(64);
-            }
         }
     }
 
@@ -34,7 +31,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: rem(64);
         width: rem(64);
         height: rem(80);
         border-radius: 0;

@@ -1,0 +1,96 @@
+.newsletter {
+    background-color: $color-white;
+    padding: rem(48) rem(16);
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: rem(16);
+        max-width: $break-point-large;
+        margin: 0 auto;
+        padding: 0 rem(16);
+
+        @include respond-to('tablet') {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 0 rem(48);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        @include respond-to('tablet') {
+            width: fit-content;
+            margin-left: auto;
+        }
+    }
+
+    &__title {
+        color: $color-brand-dark;
+        line-height: 1.2;
+        margin-bottom: rem(16);
+
+        @include respond-to('tablet') {
+            font-size: $fs-500;
+        }
+    }
+
+    &__text {
+        color: $color-brand-dark;
+        line-height: 1.5;
+        max-width: rem(350);
+    }
+
+    &__search-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &__search-box {
+        position: relative;
+        width: 100%;
+        max-width: rem(380);
+        height: rem(44);
+
+        border: 1px solid $color-brand-dark;
+        border-radius: rem(24);
+        background: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0 rem(16);
+
+        @include respond-to('tablet') {
+            height: rem(56);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        color: $color-brand-dark;
+
+        padding-left: rem(32);
+
+        &::placeholder {
+            color: $color-brand-dark;
+            opacity: 1;
+            font-weight: $weight-light;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: rem(16);
+        color: $color-brand-dark;
+        font-size: $fs-400;
+        pointer-events: none;
+    }
+}
