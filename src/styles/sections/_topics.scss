@@ -1,0 +1,53 @@
+.topics {
+    background: linear-gradient(90deg, $color-brand-dark, $color-brand-light);
+    padding: rem(48) rem(16);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__heading {
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(16);
+
+        list-style: none;
+        width: 100%;
+
+        max-width: rem(1000);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $satsuma;
+        text-align: center;
+
+        padding: rem(24);
+        font-weight: $weight-bold;
+
+        width: fit-content;
+        max-width: 100%;
+
+        @include respond-to('tablet') {
+            font-size: $fs-500;
+        }
+
+        &:hover {
+            background-color: darken($satsuma, 8%);
+            transform: translateY(-3px);
+        }
+    }
+}

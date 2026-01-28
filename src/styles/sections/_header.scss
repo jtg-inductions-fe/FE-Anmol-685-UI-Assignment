@@ -13,6 +13,9 @@
 
         @include respond-to('desktop') {
             padding: 0 rem(64);
+            @include respond-to('desktop') {
+                padding: 0 rem(64);
+            }
         }
     }
 
@@ -31,6 +34,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: rem(64);
         width: rem(64);
         height: rem(80);
         border-radius: 0;
@@ -213,11 +217,7 @@
             padding: rem(10) rem(16);
             font-weight: $weight-regular;
             font-size: $fs-200;
-            background: linear-gradient(
-                90deg,
-                $color-brand-dark,
-                $color-brand-light
-            );
+            background: linear-gradient(90deg, $color-brand-dark);
             background-clip: text;
             color: transparent;
 

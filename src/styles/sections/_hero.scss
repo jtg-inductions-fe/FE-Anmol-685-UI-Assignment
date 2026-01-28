@@ -2,6 +2,7 @@
     background: linear-gradient(90deg, $color-brand-dark, $color-brand-light);
     position: relative;
     height: rem(216);
+    height: rem(216);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,6 +64,7 @@
         height: 100%;
         background: transparent;
         border: none;
+        border-radius: 24px;
         border-radius: 24px;
         outline: none;
 
