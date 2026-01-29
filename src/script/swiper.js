@@ -59,6 +59,4 @@ if (typeof Swiper !== 'undefined') {
             },
         },
     });
-} else {
-    console.error('Swiper library not found.');
 }
