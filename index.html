@@ -4,12 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Alura Books</title>
-        <link rel="stylesheet" href="src/styles/main.scss" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+
+        <meta
+            name="description"
+            content="Alura books offers tech books, e-books, and learning resources for developers and students"
         />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="src/styles/main.scss" />
         <script type="module" src="./src/script/index.js"></script>
     </head>
     <body>
@@ -38,7 +38,6 @@
                             alt=""
                             class="header__logo-img"
                             aria-hidden="true"
-                            loading="lazy"
                         />
                         <span class="header__brand-text heading-3">
                             <strong class="header__brand-text__title"
@@ -59,6 +58,7 @@
                                 class="header__link text-body"
                                 aria-haspopup="true"
                                 aria-expanded="false"
+                                aria-label="Catagories menu"
                             >
                                 CATEGORIES
                             </button>
@@ -125,6 +125,7 @@
                         <button
                             aria-hidden="true"
                             class="header__icon_fav icon-favorite"
+                            aria-label="Favourites button"
                         ></button>
                     </a>
 
@@ -136,6 +137,7 @@
                         <button
                             aria-hidden="true"
                             class="header__icon icon-Bag"
+                            aria-label="bag button"
                         ></button>
 
                         <span class="heading-6 header__action-text"
@@ -151,6 +153,7 @@
                         <button
                             aria-hidden="true"
                             class="header__icon icon-Avatar"
+                            aria-label="profile button"
                         ></button>
 
                         <span class="heading-6 header__action-text"
@@ -245,7 +248,6 @@
                                     <img
                                         src="/assets/images/Arquitetura.webp"
                                         alt="Book 1"
-                                        loading="lazy"
                                     />
                                 </div>
                             </div>
@@ -269,9 +271,11 @@
                             <div class="card__actions">
                                 <button
                                     class="card__icon-btn icon-favorite"
+                                    aria-label="card favourite button"
                                 ></button>
                                 <button
                                     class="card__icon-btn icon-Bag"
+                                    aria-label="card icon bag button"
                                 ></button>
                             </div>
                         </div>
@@ -281,7 +285,6 @@
                                 src="/assets/images/Perfil-escritora 1.webp"
                                 alt="Book Cover"
                                 class="card__img heading-3"
-                                loading="lazy"
                             />
                             <a href="#" class="card__link">Learn more</a>
                         </div>
@@ -298,31 +301,31 @@
 
                 <ul class="topics__list">
                     <li>
-                        <a href="#" class="topics__link text-tiny">Android</a>
+                        <a href="#" class="topics__link text-chip">Android</a>
                     </li>
                     <li>
-                        <a href="#" class="topics__link text-tiny">Marketing</a>
+                        <a href="#" class="topics__link text-chip">Marketing</a>
                     </li>
                     <li>
-                        <a href="#" class="topics__link text-tiny"
+                        <a href="#" class="topics__link text-chip"
                             >Agile Methodology</a
                         >
                     </li>
                     <li>
-                        <a href="#" class="topics__link text-tiny">Startups</a>
+                        <a href="#" class="topics__link text-chip">Startups</a>
                     </li>
                     <li>
-                        <a href="#" class="topics__link text-tiny"
+                        <a href="#" class="topics__link text-chip"
                             >HTML & CSS</a
                         >
                     </li>
                     <li>
-                        <a href="#" class="topics__link text-tiny">Python</a>
+                        <a href="#" class="topics__link text-chip">Python</a>
                     </li>
                     <li>
-                        <a href="#" class="topics__link text-tiny">UX Design</a>
+                        <a href="#" class="topics__link text-chip">UX Design</a>
                     </li>
-                    <li><a href="#" class="topics__link text-tiny">Java</a></li>
+                    <li><a href="#" class="topics__link text-chip">Java</a></li>
                 </ul>
             </div>
         </div>
@@ -352,5 +355,293 @@
                 </div>
             </div>
         </div>
+
+        <footer class="footer" role="contentinfo">
+            <div class="container footer__container">
+                <h2 class="footer__mobile-title text-detail">Grupo Alura</h2>
+
+                <div class="footer__content-desktop">
+                    <div class="footer__col-brand">
+                        <h2 class="footer__brand-title">Grupo Alura</h2>
+                    </div>
+
+                    <div class="footer__list-column">
+                        <h3 class="footer__list-heading text-tiny">Educação</h3>
+                        <ul class="footer__list">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Caelum website"
+                                >
+                                    <img
+                                        src="/assets/icons/Caelum.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Caelum
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Casa do Código website"
+                                >
+                                    <img
+                                        src="/assets/icons/CasaDoCodigo.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Casa do Código
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__list-column">
+                        <h3 class="footer__list-heading text-tiny">
+                            Comunidade
+                        </h3>
+                        <ul class="footer__list">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Alura website"
+                                >
+                                    <img
+                                        src="/assets/icons/Alura.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Alura
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Alura Para Empresas website"
+                                >
+                                    <img
+                                        src="/assets/icons/AluraEmpresas.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Alura Para Empresas
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Alura LATAM website"
+                                >
+                                    <img
+                                        src="/assets/icons/AluraLatam.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Alura LATAM
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Alura Start website"
+                                >
+                                    <img
+                                        src="/assets/icons/AluraStart.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Alura Start
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit MusicDot website"
+                                >
+                                    <img
+                                        src="/assets/icons/MusicDot.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    MusicDot
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Alura Língua website"
+                                >
+                                    <img
+                                        src="/assets/icons/AluraLingua.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Alura Língua
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit PM3 website"
+                                >
+                                    <img
+                                        src="/assets/icons/PM3.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    PM3
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__list-column">
+                        <h3 class="footer__list-heading text-tiny">Online</h3>
+                        <ul class="footer__list">
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Hipsters ponto Tech website"
+                                >
+                                    <img
+                                        src="/assets/icons/HipstersTech.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Hipsters ponto Tech
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Scuba Dev website"
+                                >
+                                    <img
+                                        src="/assets/icons/ScubaDev.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Scuba Dev
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Layers ponto Tech website"
+                                >
+                                    <img
+                                        src="/assets/icons/LayersTech.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Layers ponto Tech
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Like a Boss website"
+                                >
+                                    <img
+                                        src="/assets/icons/LikeABoss.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Like a Boss
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Carreira sem Fronteira website"
+                                >
+                                    <img
+                                        src="/assets/icons/CarreiraSemFronteira.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Carreira sem Fronteira
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit Hipsters ponto Jobs website"
+                                >
+                                    <img
+                                        src="/assets/icons/HipstersJobs.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    Hipsters ponto Jobs
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="footer__item-link text-tiny"
+                                    aria-label="Visit GUJ website"
+                                >
+                                    <img
+                                        src="/assets/icons/GUJ.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                        class="footer__item-icon"
+                                        loading="lazy"
+                                    />
+                                    GUJ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,3 +1,10 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 const latestReleases = [
     { src: '/assets/images/Arquitetura.webp', alt: 'Book 1' },
     { src: '/assets/images/Construct2.webp', alt: 'Book 2' },
@@ -31,6 +38,7 @@ if (slidesWrapper) {
 
 if (typeof Swiper !== 'undefined') {
     new Swiper('.mySwiper', {
+        modules: [Navigation, Pagination],
         slidesPerView: 'auto',
         spaceBetween: 16,
         centeredSlides: true,
@@ -51,6 +59,4 @@ if (typeof Swiper !== 'undefined') {
             },
         },
     });
-} else {
-    console.error('Swiper library not found.');
 }

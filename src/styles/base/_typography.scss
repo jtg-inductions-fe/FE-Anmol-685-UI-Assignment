@@ -36,7 +36,7 @@ a {
     color: $color-white;
     font-weight: $weight-light;
     font-size: $fs-700;
-
+    font-family: $font-family-serif;
     @include respond-to('tablet') {
         font-size: rem($fs-600);
     }
@@ -71,21 +71,34 @@ a {
     font-weight: $weight-bold;
 
     @include respond-to('tablet') {
-        font-size: rem(26);
+        font-size: $fs-600;
     }
 
     @include respond-to('desktop') {
-        font-size: rem(32);
+        font-size: $fs-800;
     }
 }
 
 .text-detail {
     font-size: $fs-200;
-    font-weight: $weight-light;
+    font-weight: $weight-regular;
+    color: $african-turquoise;
+}
+
+.text-chip {
+    font-size: $fs-100;
+    text-decoration: none;
+    font-weight: $weight-regular;
     color: $full-white;
+
+    @include respond-to('tablet') {
+        font-size: $fs-500;
+    }
 }
 
 .text-tiny {
     font-size: $fs-100;
-    color: $full-white;
+    text-decoration: none;
+    font-weight: $weight-regular;
+    color: $gunsmoke;
 }
