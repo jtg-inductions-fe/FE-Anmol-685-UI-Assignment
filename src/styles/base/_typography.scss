@@ -71,11 +71,11 @@ a {
     font-weight: $weight-bold;
 
     @include respond-to('tablet') {
-        font-size: rem(26);
+        font-size: $fs-600;
     }
 
     @include respond-to('desktop') {
-        font-size: rem(32);
+        font-size: $fs-800;
     }
 }
 

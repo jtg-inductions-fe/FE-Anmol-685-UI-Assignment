@@ -41,13 +41,13 @@
         width: fit-content;
         max-width: 100%;
 
-        @include respond-to('tablet') {
-            font-size: $fs-500;
-        }
-
         &:hover {
             background-color: darken($satsuma, 8%);
             transform: translateY(-3px);
+        }
+
+        @include respond-to('tablet') {
+            font-size: $fs-500;
         }
     }
 }
