@@ -1,6 +1,6 @@
 body {
     font-family: $font-family-sans;
-    font-size: $fs-400;
+    font-size: rem($fs-400);
     line-height: 1.5;
 }
 
@@ -11,31 +11,31 @@ a {
 .heading-1 {
     color: linear-gradient(90, $color-brand-dark, $color-brand-light);
     font-weight: $weight-medium;
-    font-size: $fs-300;
+    font-size: rem($fs-300);
 
     @include respond-to('tablet') {
-        font-size: $fs-500;
+        font-size: rem($fs-500);
     }
 }
 
 .heading-2 {
     color: $color-white;
     font-weight: $weight-bold;
-    font-size: $fs-200;
+    font-size: rem($fs-200);
 
     @include respond-to('tablet') {
-        font-size: $fs-500;
+        font-size: rem($fs-500);
     }
 
     @include respond-to('desktop') {
-        font-size: $fs-800;
+        font-size: rem($fs-800);
     }
 }
 
 .heading-3 {
     color: $color-white;
     font-weight: $weight-light;
-    font-size: $fs-700;
+    font-size: rem($fs-700);
     font-family: $font-family-serif;
     @include respond-to('tablet') {
         font-size: rem($fs-600);
@@ -48,17 +48,17 @@ a {
 
 .heading-4 {
     font-weight: $weight-medium;
-    font-size: $fs-600;
+    font-size: rem($fs-600);
 }
 
 .heading-5 {
     font-weight: $weight-medium;
-    font-size: $fs-500;
+    font-size: rem($fs-500);
 }
 
 .heading-6 {
     font-weight: $weight-regular;
-    font-size: $fs-400;
+    font-size: rem($fs-400);
 }
 
 .text-body {
@@ -67,38 +67,55 @@ a {
 
 .text-small {
     font-weight: $weight-medium;
-    font-size: $fs-300;
+    font-size: rem($fs-300);
     font-weight: $weight-bold;
 
     @include respond-to('tablet') {
-        font-size: $fs-600;
+        font-size: rem($fs-600);
     }
 
     @include respond-to('desktop') {
-        font-size: $fs-800;
+        font-size: rem($fs-800);
     }
 }
 
 .text-detail {
-    font-size: $fs-200;
+    font-size: rem($fs-200);
     font-weight: $weight-regular;
     color: $african-turquoise;
 }
 
 .text-chip {
-    font-size: $fs-100;
+    font-size: rem($fs-100);
     text-decoration: none;
     font-weight: $weight-regular;
     color: $full-white;
 
     @include respond-to('tablet') {
-        font-size: $fs-500;
+        font-size: rem($fs-500);
     }
 }
 
 .text-tiny {
-    font-size: $fs-100;
+    font-size: rem($fs-100);
     text-decoration: none;
     font-weight: $weight-regular;
     color: $gunsmoke;
+}
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?b19jv0');
+    src:
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?b19jv0#iefix')
+            format('embedded-opentype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?b19jv0')
+            format('truetype'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?b19jv0')
+            format('woff'),
+        url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?b19jv0##{$icomoon-font-family}')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }

@@ -44,10 +44,6 @@
     text-overflow: ellipsis;
 }
 
-@mixin transition($prop: all, $time: 0.3s) {
-    transition: $prop $time ease-in-out;
-}
-
 @function rem($pixels, $context: 16) {
     @if (type-of($pixels) == 'number') and (not unitless($pixels)) {
         $pixels: math.div($pixels, ($pixels * 0 + 1));

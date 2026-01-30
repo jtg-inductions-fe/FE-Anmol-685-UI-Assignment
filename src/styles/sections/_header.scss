@@ -2,14 +2,13 @@
     background-color: $color-white;
     height: rem(80);
     position: relative;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: $box-shadow;
 
     &__container {
         @include flex-between;
         height: 100%;
         max-width: $break-point-large;
         margin: 0 auto;
-        padding: 0;
 
         @include respond-to('desktop') {
             padding: 0 rem(64);
@@ -33,11 +32,10 @@
         align-items: center;
         width: rem(64);
         height: rem(80);
-        border-radius: 0;
         background: $color-white;
         cursor: pointer;
         border: none;
-        transition: background 0.3s ease;
+        transition: background-color 0.3s ease;
 
         @include respond-to('tablet') {
             width: rem(64);
@@ -200,7 +198,7 @@
         background: $color-white;
         border: 1px solid $color-border-light;
         padding: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: $box-shadow;
         z-index: 48;
 
         li {
@@ -288,7 +286,7 @@
         @include respond-to('desktop') {
             display: block;
             font-weight: $weight-regular;
-            font-size: $fs-400;
+            font-size: rem($fs-400);
         }
     }
 
@@ -299,7 +297,7 @@
         width: 60%;
         max-width: rem(300);
         background: $color-white;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: $box-shadow;
         padding: rem(16);
         z-index: 48;
 
