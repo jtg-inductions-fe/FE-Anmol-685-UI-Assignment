@@ -20,24 +20,31 @@ if (hamburgerBtn && mobileMenu) {
         mobileMenu.setAttribute('aria-hidden', 'true');
     }
 
-    hamburgerBtn.addEventListener('click', toggleMenu);
-
-    hamburgerBtn.addEventListener('keydown', (event) => {
+    function handleHamburgerKeydown(event) {
         if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
             toggleMenu();
         }
-    });
+    }
 
-    document.addEventListener('click', (event) => {
+    function handleOutsideClick(event) {
         const isClickInside =
             hamburgerBtn.contains(event.target) ||
             mobileMenu.contains(event.target);
+
         if (
             !isClickInside &&
             mobileMenu.classList.contains('header__mobile-menu--active')
         ) {
             closeMenu();
         }
-    });
+    }
+
+    function attachEventListeners() {
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        hamburgerBtn.addEventListener('keydown', handleHamburgerKeydown);
+        document.addEventListener('click', handleOutsideClick);
+    }
+
+    attachEventListeners();
 }

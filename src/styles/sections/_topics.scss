@@ -42,7 +42,7 @@
         }
 
         @include respond-to('tablet') {
-            font-size: $fs-500;
+            font-size: rem($fs-500);
         }
     }
 }
